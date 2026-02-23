@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  web:
+    image: ${DOCKER_HUB_USERNAME}/myapp:${TAG}
+    command: "python manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - .:/myapp1
+    ports:
+      - "8000:8000"
